@@ -1,12 +1,15 @@
 import { Text, TextInput, View, TouchableOpacity } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Icon from "react-native-vector-icons/FontAwesome";
+import { Link } from "expo-router";
 
 export default function SignUp() {
   return (
     <View className="flex-1 bg-gray-100 p-6">
       <TouchableOpacity className="w-12 h-12 rounded-full bg-white justify-center items-center mb-4 shadow-sm">
-        <AntDesign name="left" size={24} color="black" />
+        <Link href="/">
+          <AntDesign name="left" size={24} color="black" />
+        </Link>
       </TouchableOpacity>
 
       <View className="items-center gap-2 mb-6">
@@ -40,11 +43,11 @@ export default function SignUp() {
         <Text className="text-white font-bold text-base">Create Account</Text>
       </TouchableOpacity>
       <View className="flex-row items-center justify-center gap-2 mb-6">
-        <View className="h-px bg-gray-400 flex-1" />
+        <View className="h-px bg-gray-400 flex-1 opacity-50" />
         <Text className="text-gray-600 text-sm text-center">Or sign up with</Text>
-        <View className="h-px bg-gray-400 flex-1" />
+        <View className="h-px bg-gray-400 flex-1 opacity-50" />
       </View>
-      <View className="flex-row justify-center items-center gap-8 mb-8">
+      <View className="flex-row justify-center items-center gap-8 mt-4">
         <TouchableOpacity className="w-16 h-16 bg-white rounded-full justify-center items-center shadow-sm">
           <Icon name="google" size={40} color="#DB4437" />
         </TouchableOpacity>
@@ -55,12 +58,14 @@ export default function SignUp() {
           <Icon name="facebook" size={40} color="#4267B2" />
         </TouchableOpacity>
       </View>
-      <View className="flex-row justify-center items-center gap-2">
+      <View className="flex-row justify-center items-center gap-2 mt-16">
         <Text className="text-gray-600 text-sm">Already have an account?</Text>
         <TouchableOpacity>
-          <Text className="text-blue-600 font-semibold text-sm">Sign In</Text>
+          <Link href="/signin" >
+            <Text className="text-blue-600 font-semibold text-sm">Sign In</Text>
+          </Link>
         </TouchableOpacity>
       </View>
-    </View>
+    </View >
   );
 }

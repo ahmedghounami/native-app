@@ -1,22 +1,48 @@
-import { Image, Text, View, ViewBase } from "react-native";
-import "./global.css";
-import { Link } from "expo-router";
-
-export default function App() {
+import { View, Text, Image, TouchableOpacity } from "react-native";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import { useRouter } from "expo-router";
+export default function Index() {
+    const router = useRouter();
     return (
-        <View className="flex-1 items-center justify-center bg-black">
-            <Text className="text-3xl font-bold text-white">
-                Welcome to your landing page!
-            </Text>
-            <View className="h-8" >
-
-                <Link href="/signup">
-                    <Text className="mt-4 text-lg text-blue-500">Go to Sign Up</Text>
-                </Link>
-                <Link href="/signin">
-                    <Text className="mt-4 text-lg text-blue-500">Go to Sign In</Text>
-                </Link>
+        <View className="flex-1 items-center bg-white px-6">
+            <View className="mt-10">
+                <Text
+                    className="text-5xl font-extrabold text-center"
+                    style={{ color: "#0000FF" }}
+                >
+                    TaskFlow App
+                </Text>
             </View>
-        </View>
+
+            <View className="mt-5">
+                <Text
+                    className="text-center text-lg"
+                    style={{ color: "#808080", lineHeight: 24 }}
+                >
+                    Organize your tasks efficiently with TaskFlow, your personal task
+                    management app.
+                </Text>
+            </View>
+
+            <Image
+                source={require("../assets/images/todo.png")}
+                resizeMode="contain"
+                style={{
+                    width: 350,
+                    height: 350,
+                    marginVertical: 20,
+                }}
+            />
+
+            <TouchableOpacity className="flex-row relative bg-blue-600 rounded-full mt-6 px-20 py-6 justify-around items-center " 
+                onPress={() => router.push("/signup")}
+            >
+                <AntDesign name="arrowright" size={24} color="white" />
+                <Text className="text-white font-extrabold text-lg"> Get Started</Text>
+
+            </TouchableOpacity >
+        </View >
     );
 }
+
+

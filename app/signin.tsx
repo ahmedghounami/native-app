@@ -1,5 +1,7 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
+import { Link } from "expo-router";
+
 
 export default function SignIn() {
     return (
@@ -28,18 +30,21 @@ export default function SignIn() {
                 </TouchableOpacity>
             </View>
             <View className="flex-row justify-center items-center gap-2">
-                <Text className="h-px flex-1 bg-gray-400" />
+                <Text className="h-px flex-1 bg-gray-400 opacity-50" />
                 <Text className="text-gray-600 text-sm">Or</Text>
-                <Text className="h-px flex-1 bg-gray-400" />
+                <Text className="h-px flex-1 bg-gray-400 opacity-50" />
             </View>
             <TouchableOpacity className="bg-blue-600 py-5 rounded-full justify-center items-center min-w-full">
                 <Text className="text-white font-bold text-base">Sign in with Email</Text>
             </TouchableOpacity>
             <View className="flex-row justify-center items-center gap-2">
                 <Text className="text-gray-600 text-sm">Don't have an account?</Text>
-                <TouchableOpacity>
-                    <Text className="text-blue-600 text-sm font-semibold">Create an account</Text>
+                <TouchableOpacity >
+                    <Link href="/signup">
+                        <Text className="text-blue-600 text-sm font-semibold">Create an account</Text>
+                    </Link>
                 </TouchableOpacity>
+
             </View>
         </View>
     )
