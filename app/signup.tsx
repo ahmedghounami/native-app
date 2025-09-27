@@ -2,8 +2,9 @@ import { Text, TextInput, View, TouchableOpacity } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Link } from "expo-router";
-
+import { useRouter } from "expo-router";
 export default function SignUp() {
+  const router = useRouter();
   return (
     <View className="flex-1 bg-gray-100 p-6">
       <TouchableOpacity className="w-12 h-12 rounded-full bg-white justify-center items-center mb-4 shadow-sm">
@@ -39,7 +40,9 @@ export default function SignUp() {
           className="bg-white px-6 py-4 rounded-full text-sm font-semibold shadow-sm"
         />
       </View>
-      <TouchableOpacity className="bg-blue-600 py-5 rounded-full mb-6 justify-center items-center">
+      <TouchableOpacity className="bg-blue-600 py-5 rounded-full mb-6 justify-center items-center"
+        onPress={() => { router.push("/home"); }}
+        >
         <Text className="text-white font-bold text-base">Create Account</Text>
       </TouchableOpacity>
       <View className="flex-row items-center justify-center gap-2 mb-6">

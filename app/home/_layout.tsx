@@ -14,23 +14,27 @@ export default function RootLayout() {
             <Text className="text-xs font-semibold mt-1 text-gray-600">Home</Text>
           </View>
         </Link>
-        <Link href="/tasks">
+        <Link href="/home/tasks">
           <View className="flex items-center">
-            <MaterialIcons name="check-circle" size={26} color="gray"/>
+            <MaterialIcons name="check-circle" size={26} color="gray" />
             <Text className="text-xs font-semibold mt-1 text-gray-600">Tasks</Text>
           </View>
         </Link>
-
-        <Link href="/favorites">
+        <Link href="/home/chat">
           <View className="flex items-center">
-            <MaterialIcons name="favorite" size={26} color="gray"/>
-            <Text className="text-xs font-semibold mt-1 text-gray-600">Favorites</Text>
+            <MaterialIcons name="chat" size={26} color="gray" />
+            <Text className="text-xs font-semibold mt-1 text-gray-600">Chat</Text>
           </View>
         </Link>
-
-        <Link href="/settings">
+        <Link href="/home/community">
           <View className="flex items-center">
-            <MaterialIcons name="settings" size={26} color="gray"/>
+            <MaterialIcons name="people" size={26} color="gray" />
+            <Text className="text-xs font-semibold mt-1 text-gray-600">community</Text>
+          </View>
+        </Link>
+        <Link href="/home/settings">
+          <View className="flex items-center">
+            <MaterialIcons name="settings" size={26} color="gray" />
             <Text className="text-xs font-semibold mt-1 text-gray-600">Settings</Text>
           </View>
         </Link>

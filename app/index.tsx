@@ -19,8 +19,7 @@ export default function Index() {
                     className="text-center text-lg"
                     style={{ color: "#808080", lineHeight: 24 }}
                 >
-                    Organize your tasks efficiently with TaskFlow, your personal task
-                    management app.
+                    From managing tasks to sharing expertise, we empower teams to collaborate, learn, and grow together.
                 </Text>
             </View>
 
@@ -34,7 +33,7 @@ export default function Index() {
                 }}
             />
 
-            <TouchableOpacity className="flex-row relative bg-blue-600 rounded-full mt-6 px-20 py-6 justify-around items-center " 
+            <TouchableOpacity className="flex-row relative bg-blue-600 rounded-full mt-6 px-20 py-6 justify-around items-center "
                 onPress={() => router.push("/signup")}
             >
                 <AntDesign name="arrowright" size={24} color="white" />
